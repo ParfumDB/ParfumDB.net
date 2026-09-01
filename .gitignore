@@ -1,0 +1,6 @@
+# Nothing here is generated locally — the repository holds only what is published.
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/

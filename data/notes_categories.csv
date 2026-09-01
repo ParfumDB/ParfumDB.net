@@ -1,0 +1,107 @@
+cat_id|slug|name|url|child_count|related_categories
+c6|agarwood|Agarwood / Oud|https://www.parfumo.com/Fragrance_Notes/agarwood|106|c300;c445;c494;c668
+c9|Aldehydes|Aldehydes|https://www.parfumo.com/Fragrance_Notes/Aldehydes|17|c234;c562
+c12|Allspice|Allspice|https://www.parfumo.com/Fragrance_Notes/Allspice|13|c566;c567
+c17|Amber|Amber|https://www.parfumo.com/Fragrance_Notes/Amber|91|
+c18|Ambergris|Ambergris|https://www.parfumo.com/Fragrance_Notes/Ambergris|53|c20;c25
+c25|Animalic_notes|Animalic notes|https://www.parfumo.com/Fragrance_Notes/Animalic_notes|115|c118;c145;c18;c230;c24;c296;c334;c414;c559
+c26|Aniseed|Aniseed|https://www.parfumo.com/Fragrance_Notes/Aniseed|18|c1;c284;c567
+c28|Apricot|Apricot|https://www.parfumo.com/Fragrance_Notes/Apricot|38|c239;c634
+c44|Balsamic_notes|Balsamic notes|https://www.parfumo.com/Fragrance_Notes/Balsamic_notes|72|c140;c167;c21;c228;c270;c300;c42;c43;c45;c478;c488;c524;c525;c621
+c64|Benzoin|Benzoin|https://www.parfumo.com/Fragrance_Notes/Benzoin|29|c445;c524
+c65|Bergamot|Bergamot|https://www.parfumo.com/Fragrance_Notes/Bergamot|57|c141;c143
+c66|Berries|Berries|https://www.parfumo.com/Fragrance_Notes/Berries|106|c177;c187;c203;c217;c239;c240;c259;c260;c315;c412;c516;c517;c518;c534;c549;c578;c659;c73;c76;c81;c87
+c68|Birch|Birch|https://www.parfumo.com/Fragrance_Notes/Birch|48|c494;c669
+c73|Black_currant|Blackcurrant|https://www.parfumo.com/Fragrance_Notes/Black_currant|43|c187;c66
+c76|Blackberry|Blackberry|https://www.parfumo.com/Fragrance_Notes/Blackberry|36|c66
+c678|boozy-notes|Boozy notes|https://www.parfumo.com/Fragrance_Notes/boozy-notes|332|c261;c692
+c109|Caramel|Caramel|https://www.parfumo.com/Fragrance_Notes/Caramel|47|c261;c592
+c112|Carnation|Carnation|https://www.parfumo.com/Fragrance_Notes/Carnation|20|c204;c231
+c117|Cassia|Cassia|https://www.parfumo.com/Fragrance_Notes/Cassia|15|c231;c494
+c119|cedar|Cedar|https://www.parfumo.com/Fragrance_Notes/cedar|111|c166;c38;c646;c669
+c134|Chocolate|Chocolate|https://www.parfumo.com/Fragrance_Notes/Chocolate|71|c261;c504;c592;c620
+c139|Cinnamon|Cinnamon|https://www.parfumo.com/Fragrance_Notes/Cinnamon|54|c566;c567
+c140|Cistus|Cistus|https://www.parfumo.com/Fragrance_Notes/Cistus|35|c329;c44;c494;c525
+c141|Citric_notes|Citric notes|https://www.parfumo.com/Fragrance_Notes/Citric_notes|318|c142;c143;c150;c264;c314;c316;c317;c328;c337;c338;c339;c347;c357;c371;c399;c406;c424;c441;c479;c499;c548;c554;c579;c641;c65;c677;c70;c71;c79
+c143|citrus-fruits|Citrus fruits|https://www.parfumo.com/Fragrance_Notes/citrus-fruits|183|c141;c142;c144;c150;c239;c264;c316;c317;c328;c337;c371;c399;c423;c548;c554;c579;c65;c677;c70;c79
+c158|Coconut|Coconut|https://www.parfumo.com/Fragrance_Notes/Coconut|65|c428
+c160|Cognac|Cognac|https://www.parfumo.com/Fragrance_Notes/Cognac|14|c263;c570
+c166|Coniferous_trees|Coniferous trees|https://www.parfumo.com/Fragrance_Notes/Coniferous_trees|181|c107;c119;c181;c191;c227;c266;c281;c31;c331;c38;c42;c487;c494;c551;c556;c572;c575;c593;c614;c615;c646;c669;c675;c695
+c169|Coriander|Coriander|https://www.parfumo.com/Fragrance_Notes/Coriander|27|c285;c567
+c175|Cotton_candy|Cotton candy|https://www.parfumo.com/Fragrance_Notes/Cotton_candy|5|c581
+c184|Cumin|Cumin|https://www.parfumo.com/Fragrance_Notes/Cumin|12|c566;c567
+c189|Cyclamen|Cyclamen|https://www.parfumo.com/Fragrance_Notes/Cyclamen|14|c231
+c204|Dianthus|Dianthus|https://www.parfumo.com/Fragrance_Notes/Dianthus|16|c112;c231
+c214|Earthy_notes|Earthy notes|https://www.parfumo.com/Fragrance_Notes/Earthy_notes|67|c398;c464;c470;c563
+c225|Fig|Fig|https://www.parfumo.com/Fragrance_Notes/Fig|67|c266
+c231|Floral_notes|Floral notes|https://www.parfumo.com/Fragrance_Notes/Floral_notes|1250|c103;c104;c105;c112;c117;c124;c136;c16;c170;c173;c180;c189;c192;c195;c197;c198;c200;c204;c208;c217;c22;c226;c233;c235;c236;c245;c248;c249;c256;c271;c273;c277;c278;c279;c280;c283;c284;c286;c290;c294;c295;c299;c302;c303;c308;c333;c342;c344;c345;c346;c35;c351;c359;c365;c369;c37;c372;c378;c397;c40;c404;c415;c419;c420;c422;c424;c434;c442;c443;c446;c452;c455;c461;c473;c474;c481;c492;c494;c497;c5;c502;c508;c523;c526;c530;c533;c568;c574;c582;c585;c597;c60;c604;c617;c628;c629;c63;c644;c650;c655;c660;c667;c676;c71;c8;c80;c84;c91;c94
+c233|flowers|Flowers|https://www.parfumo.com/Fragrance_Notes/flowers|397|c144;c231;c348;c422;c442;c494;c71
+c234|Fragrance_ingredients|Fragrance ingredients|https://www.parfumo.com/Fragrance_Notes/Fragrance_ingredients|666|c116;c172;c183;c20;c229;c232;c255;c29;c318;c373;c414;c480;c529;c594;c595;c643;c9
+c236|Freesia|Freesia|https://www.parfumo.com/Fragrance_Notes/Freesia|20|c231
+c239|Fruits|Fruits|https://www.parfumo.com/Fragrance_Notes/Fruits|459|c129;c143;c187;c199;c210;c240;c253;c263;c264;c268;c27;c28;c307;c314;c324;c361;c374;c375;c39;c392;c394;c401;c423;c456;c462;c466;c469;c47;c477;c489;c496;c498;c507;c515;c518;c547;c578;c634;c652;c66
+c240|Fruity_notes|Fruity notes|https://www.parfumo.com/Fragrance_Notes/Fruity_notes|298|c217;c239;c286;c314;c422;c428;c436;c446;c512;c527;c534;c547;c583;c601;c622;c66
+c245|Gardenia|Gardenia|https://www.parfumo.com/Fragrance_Notes/Gardenia|30|c231;c660
+c261|Gourmandy_notes|Gourmandy notes|https://www.parfumo.com/Fragrance_Notes/Gourmandy_notes|401|c101;c109;c127;c134;c157;c178;c206;c209;c216;c272;c289;c297;c340;c356;c381;c390;c396;c41;c413;c419;c463;c500;c504;c505;c511;c553;c564;c571;c581;c584;c588;c592;c596;c627;c67;c671;c678;c681;c683;c69;c691;c90;c97
+c265|Grasses|Grasses|https://www.parfumo.com/Fragrance_Notes/Grasses|131|c102;c190;c266;c274;c282;c338;c452;c589;c642
+c266|Green_notes|Green notes|https://www.parfumo.com/Fragrance_Notes/Green_notes|310|c102;c11;c14;c152;c154;c166;c182;c224;c225;c232;c265;c282;c284;c285;c304;c314;c321;c336;c341;c360;c386;c388;c402;c454;c459;c46;c465;c493;c494;c50;c527;c54;c55;c560;c576;c607;c639;c642;c645;c686;c7;c94;c99
+c278|helichrysum|Helichrysum|https://www.parfumo.com/Fragrance_Notes/helichrysum|6|c231;c299
+c279|heliotrope|Heliotrope|https://www.parfumo.com/Fragrance_Notes/heliotrope|10|c231
+c289|Honey|Honey|https://www.parfumo.com/Fragrance_Notes/Honey|127|c261;c422;c571;c59
+c299|Immortelle|Immortelle|https://www.parfumo.com/Fragrance_Notes/Immortelle|21|c231;c278
+c300|incense|Incense|https://www.parfumo.com/Fragrance_Notes/incense|96|c168;c211;c417;c437;c44;c440;c445;c45;c453;c524;c525;c546;c561;c6
+c303|Iris|Iris|https://www.parfumo.com/Fragrance_Notes/Iris|131|c231;c503
+c308|Jasmine|Jasmine|https://www.parfumo.com/Fragrance_Notes/Jasmine|146|c231;c309;c310;c311;c312;c660
+c334|Leather|Leather|https://www.parfumo.com/Fragrance_Notes/Leather|50|c25;c335;c539;c580
+c336|leaves|Leaves|https://www.parfumo.com/Fragrance_Notes/leaves|243|c224;c266;c284;c285;c494;c566
+c337|Lemon|Lemon|https://www.parfumo.com/Fragrance_Notes/Lemon|124|c141;c143
+c345|Lily|Lily|https://www.parfumo.com/Fragrance_Notes/Lily|69|c103;c231
+c346|Lily_of_the_valley|Lily-of-the-valley|https://www.parfumo.com/Fragrance_Notes/Lily_of_the_valley|21|c231;c660
+c347|Lime|Lime|https://www.parfumo.com/Fragrance_Notes/Lime|58|c100;c141;c348
+c359|Lotus|Lotus|https://www.parfumo.com/Fragrance_Notes/Lotus|49|c231
+c371|Mandarin|Mandarin|https://www.parfumo.com/Fragrance_Notes/Mandarin|123|c141;c143;c150;c548;c603
+c389|may-rose|May rose|https://www.parfumo.com/Fragrance_Notes/may-rose|11|c532;c533
+c394|Melon|Melon|https://www.parfumo.com/Fragrance_Notes/Melon|40|c239
+c397|Mimosa|Mimosa|https://www.parfumo.com/Fragrance_Notes/Mimosa|27|c231
+c408|Mossy_notes|Mossy notes|https://www.parfumo.com/Fragrance_Notes/Mossy_notes|72|c343;c407;c430;c626
+c414|Musk|Musk|https://www.parfumo.com/Fragrance_Notes/Musk|120|c19;c202;c234;c25;c559
+c419|n-a||https://www.parfumo.com/Fragrance_Notes/n-a|2|c1;c126;c15;c156;c194;c231;c250;c261;c383;c494;c538;c543;c570;c58;c612;c648;c658;c666;c67;c686;c692
+c422|nectar|Nectar|https://www.parfumo.com/Fragrance_Notes/nectar|70|c231;c233;c240;c289;c314
+c424|Neroli|Neroli|https://www.parfumo.com/Fragrance_Notes/Neroli|36|c141;c231;c70;c71
+c429|Oak|Oak|https://www.parfumo.com/Fragrance_Notes/Oak|58|c494;c669
+c430|Oakmoss|Oakmoss|https://www.parfumo.com/Fragrance_Notes/Oakmoss|40|c407;c408;c626
+c435|olfactory-qualities|Olfactory qualities|https://www.parfumo.com/Fragrance_Notes/olfactory-qualities|51|c426
+c440|Opoponax|Opoponax|https://www.parfumo.com/Fragrance_Notes/Opoponax|18|c300;c524
+c441|Orange|Orange|https://www.parfumo.com/Fragrance_Notes/Orange|129|c141;c442
+c443|Orchid|Orchid|https://www.parfumo.com/Fragrance_Notes/Orchid|105|c231;c637
+c445|Oriental_notes|Oriental notes|https://www.parfumo.com/Fragrance_Notes/Oriental_notes|268|c300;c417;c464;c6;c623;c636;c64
+c446|Osmanthus|Osmanthus|https://www.parfumo.com/Fragrance_Notes/Osmanthus|33|c231;c240
+c464|Patchouli|Patchouli|https://www.parfumo.com/Fragrance_Notes/Patchouli|62|c214;c445
+c466|Peach|Peach|https://www.parfumo.com/Fragrance_Notes/Peach|86|c239
+c474|Peony|Peony|https://www.parfumo.com/Fragrance_Notes/Peony|25|c231
+c479|Petitgrain|Petitgrain|https://www.parfumo.com/Fragrance_Notes/Petitgrain|29|c141;c70
+c496|Plum|Plum|https://www.parfumo.com/Fragrance_Notes/Plum|70|c239;c401;c78
+c686|poisonous-plant|Poisonous plant|https://www.parfumo.com/Fragrance_Notes/poisonous-plant|91|c266;c419;c494
+c503|Powdery_notes|Powdery notes|https://www.parfumo.com/Fragrance_Notes/Powdery_notes|78|c303
+c504|Praline|Praliné|https://www.parfumo.com/Fragrance_Notes/Praline|19|c134;c261;c428;c592;c620
+c518|Red_fruits|Red fruits|https://www.parfumo.com/Fragrance_Notes/Red_fruits|20|c239;c516;c578;c66
+c524|Resinous_notes|Resinous notes|https://www.parfumo.com/Fragrance_Notes/Resinous_notes|210|c211;c218;c243;c300;c313;c329;c385;c417;c43;c44;c440;c45;c494;c525;c577;c59;c605;c64;c653
+c530|Robinia|Robinia|https://www.parfumo.com/Fragrance_Notes/Robinia|6|c231
+c532|Rosa_centifolia|Rosa centifolia|https://www.parfumo.com/Fragrance_Notes/Rosa_centifolia|28|c389;c533
+c533|Rose|Rose|https://www.parfumo.com/Fragrance_Notes/Rose|426|c196;c207;c231;c244;c389;c452;c532;c534;c608;c631;c662;c95
+c536|Rosewood|Rosewood|https://www.parfumo.com/Fragrance_Notes/Rosewood|19|c669
+c540|Saffron|Saffron|https://www.parfumo.com/Fragrance_Notes/Saffron|45|c566;c567
+c546|Sandalwood|Sandalwood|https://www.parfumo.com/Fragrance_Notes/Sandalwood|97|c300;c669
+c561|Smoky_notes|Smoky notes|https://www.parfumo.com/Fragrance_Notes/Smoky_notes|214|c300;c323;c330
+c567|Spicy_notes|Spicy notes|https://www.parfumo.com/Fragrance_Notes/Spicy_notes|343|c110;c111;c12;c120;c133;c139;c151;c169;c184;c188;c222;c223;c251;c26;c284;c285;c315;c332;c416;c427;c458;c475;c53;c540;c550;c552;c555;c566;c573;c632;c72
+c580|Suede|Suede|https://www.parfumo.com/Fragrance_Notes/Suede|8|c334
+c581|Sugar|Sugar|https://www.parfumo.com/Fragrance_Notes/Sugar|76|c175;c261
+c592|sweets|Sweets|https://www.parfumo.com/Fragrance_Notes/sweets|132|c109;c134;c261;c272;c356;c381;c504;c584;c620
+c623|Tonka_bean|Tonka bean|https://www.parfumo.com/Fragrance_Notes/Tonka_bean|46|c183;c445
+c628|Tuberose|Tuberose|https://www.parfumo.com/Fragrance_Notes/Tuberose|34|c231;c660
+c636|Vanilla|Vanilla|https://www.parfumo.com/Fragrance_Notes/Vanilla|154|c445;c598;c637;c85
+c642|Vetiver|Vetiver|https://www.parfumo.com/Fragrance_Notes/Vetiver|72|c265;c266;c669
+c644|Violet|Violet|https://www.parfumo.com/Fragrance_Notes/Violet|53|c231;c5;c645
+c660|White_flowers|White flowers|https://www.parfumo.com/Fragrance_Notes/White_flowers|157|c231;c245;c308;c346;c442;c617;c628;c676
+c668|woods|Woods|https://www.parfumo.com/Fragrance_Notes/woods|294|c215;c366;c384;c494;c522;c6;c669;c98
+c669|Woody_notes|Woody notes|https://www.parfumo.com/Fragrance_Notes/Woody_notes|484|c10;c116;c119;c130;c166;c191;c212;c215;c219;c242;c287;c288;c305;c320;c352;c36;c366;c376;c377;c38;c384;c409;c411;c429;c433;c449;c450;c451;c457;c459;c494;c50;c501;c536;c546;c56;c609;c610;c615;c630;c642;c646;c654;c665;c668;c68;c98
+c676|Ylang_ylang|Ylang-ylang|https://www.parfumo.com/Fragrance_Notes/Ylang_ylang|33|c231;c660

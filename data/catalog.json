@@ -1,0 +1,30 @@
+{
+  "snapshot": "v1.9-2026-09-01",
+  "snapshot_date": "2026-09-01",
+  "source": "https://www.parfumo.com",
+  "catalog": {
+    "perfumes": 231997,
+    "brands": 14617,
+    "perfumers": 2549,
+    "notes_unique": 12393,
+    "notes_canonical": 12130,
+    "notes_file_rows": 12559,
+    "note_categories": 653,
+    "accords": 22,
+    "accords_unique": 21,
+    "photos_total": 197600
+  },
+  "ugc_records_total": 4390534,
+  "ugc_by_file": {
+    "reviews.parquet": 295223,
+    "statements.parquet": 1075703,
+    "comments.parquet": 2819165,
+    "photos.parquet": 197600,
+    "videos.parquet": 2843
+  },
+  "release_size_mb": {
+    "compressed": 407,
+    "uncompressed": 560.9
+  },
+  "sample_rows_per_file": 10
+}
