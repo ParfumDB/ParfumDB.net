@@ -3,6 +3,23 @@
 Dates are snapshot dates — the day the catalogue was captured, not the day the preview was
 committed.
 
+## v1.10 — 2026-09-10
+
+- 233,006 perfumes (+1,009), 14,671 brands (+54). Perfumers, notes and note categories are
+  unchanged.
+- 4,409,112 community records (+18,578): reviews 297,279, statements 1,083,415,
+  replies 2,827,499, photo records 198,051, videos 2,868.
+- Notes restated as **12,559** — the row count of `notes.csv`, the figure parfumdb.net shows.
+  The file had 12,559 rows in v1.9 as well; the 12,393 quoted until now came from an earlier count.
+- Documentation re-measured against this snapshot. Several figures in the README, the field
+  dictionary and the UGC page were still at v1.8 — review, statement and reply counts, 28.7M
+  property votes, the reply split, video-id coverage. All of them now come from the v1.10
+  files. The plausible year range is 1709–2026, not 2027 as stated before.
+- The Quick start in the README pointed at a perfume that is not in the preview; it now reads
+  the first row.
+- Preview rows in `data/` are unchanged — the file layout did not move. Only `catalog.json`
+  follows the release.
+
 ## v1.9 — 2026-09-01
 
 - 231,997 perfumes (+1,162), 14,617 brands (+33). Perfumers, notes and note categories are

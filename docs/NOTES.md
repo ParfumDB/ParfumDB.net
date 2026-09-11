@@ -1,15 +1,15 @@
 # Notes and their taxonomy
 
-12,393 unique notes, arranged under 653 hierarchical categories. Two things here differ
+12,559 notes (12,513 distinct names), arranged under 653 hierarchical categories. Two things here differ
 from what a flat note list would give you, and both change how you should query.
 
 ## The pyramid has two shapes
 
-`notes_pyramid` is populated for 85.4% of perfumes, in one of two forms:
+`notes_pyramid` is populated for 85.5% of perfumes, in one of two forms:
 
 ```
-top(3674;1525;1859)middle(4760;1998)base(693;3140;72)     55.6% of perfumes
-linear(2451;1443;4760;693)                                44.4% of perfumes
+top(3674;1525;1859)middle(4760;1998)base(693;3140;72)     55.3% of perfumes
+linear(2451;1443;4760;693)                                44.7% of perfumes
 ```
 
 The linear form is not a defect or a truncation. It is how the source records a perfume
@@ -32,7 +32,7 @@ material, merged into a single note.
 
 A perfume's pyramid may reference **either component**. So an exact match of pyramid id
 against `n_id` fails for these — the note exists, under a key that contains the id rather
-than equalling it. Across the full catalogue that affects 159 distinct ids and 21,342
+than equalling it. Across the full catalogue that affects 159 distinct ids and 21,563
 perfumes, 9.25% of the catalogue.
 
 ```python

@@ -37,7 +37,7 @@ print(joined[["pid", "name", "name_brand", "year", "gender"]].to_string(index=Fa
 def pyramid(value):
     """top(3674;1525)middle(4760)base(693) -> {'top': [...], 'middle': [...], ...}
 
-    Also handles the linear() form, which is 44.4% of the full catalogue.
+    Also handles the linear() form, which is 44.7% of the full catalogue.
     """
     return {m.group(1): [i for i in m.group(2).split(";") if i]
             for m in re.finditer(r"(top|middle|base|linear)\(([^)]*)\)", str(value or ""))}
