@@ -16,26 +16,26 @@ If you need commerce data, this release will not give it to you at any tier.
 
 ## Present but partial
 
-Coverage over the full 233,006-perfume catalogue:
+Coverage over the full 233,382-perfume catalogue:
 
 | field | populated |
 |---|---:|
 | `description` | 100% |
-| `photo` | 96.4% |
+| `photo` | 93.1% |
 | `notes_pyramid` | 85.5% |
-| `year` | 55.2% |
-| `rating` | 46.7% |
-| `style` | 38.8% |
-| `accords` | 38.4% |
-| `bottle` histogram | 36.9% |
-| `occasion` / `season` | 36.6% / 36.6% |
-| `perfumers` | 26.8% |
-| `scent` histogram | 24.1% |
-| `longevity` / `sillage` histograms | 22.5% / 22.3% |
+| `year` | 55.3% |
+| `rating` | 47.1% |
+| `accords` | 38.9% |
+| `style` | 38.7% |
+| `bottle` histogram | 37.3% |
+| `occasion` / `season` | 37.1% / 37.1% |
+| `perfumers` | 26.9% |
+| `scent` histogram | 24.3% |
+| `longevity` / `sillage` histograms | 22.7% / 22.5% |
 | `pronunciation` | 22.0% |
 | `concentration` | 16.0% |
-| `gtin13` | 13.4% |
-| `value` histogram | 10.5% |
+| `gtin13` | 13.5% |
+| `value` histogram | 10.7% |
 | `bottle_design` | 4.7% |
 
 The low numbers are concentrated in the long tail — niche and discontinued releases the
@@ -44,17 +44,20 @@ community has not voted on. Popular perfumes are densely filled.
 ## Known quirks, deliberately preserved
 
 **Photo placeholders are filtered.** Perfumes whose only image was the source's "no photo"
-placeholder carry an empty `photo` instead — 8,423 rows. Real coverage is **96.4%**;
+placeholder carry an empty `photo` instead — 16,112 rows. Real coverage is **93.1%**;
 passing the placeholder through would have inflated it to 100% and made every one of those
-a broken image in a UI.
+a broken image in a UI. Releases before v1.11 reported 96.4% because the filter matched two
+exact placeholder URLs and the source had since moved them; it now matches by path, so the
+figure dropped without any photo being lost.
 
-**82 compound note ids.** See [NOTES.md](NOTES.md).
+**Compound note ids are gone as of v1.11.** Through v1.10, 82 rows carried a key like
+`1577;1587`; merged ids now live in `n_id_aliases_p`. See [NOTES.md](NOTES.md).
 
 **Notes without a source id are dropped** in preparation, so every row in `notes.csv` has
 a usable key. See [NOTES.md](NOTES.md).
 
-**2,482 perfumes have at least one accord with no strength value** (2.8%) — the accord is
-listed, the vote count is absent.
+**2,473 perfumes have at least one accord with no strength value** — 2.7% of those that
+carry accords. The accord is listed, the vote count is absent.
 
 **Comment dates are relative only** — "3 months ago", never an absolute timestamp. See
 [UGC.md](UGC.md).
@@ -71,7 +74,7 @@ outliers. Both are what the source states, not parsing errors.
 
 ## Integrity, verified
 
-- All 233,006 perfumes have a unique `pid`; brands, perfumers and accords likewise.
+- All 233,382 perfumes have a unique `pid`; brands, perfumers and accords likewise.
 - **Zero orphan pids** across all five community files.
 - Every pyramid note id resolves against `notes.csv` once compound keys are expanded.
 

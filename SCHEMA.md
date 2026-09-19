@@ -1,7 +1,7 @@
 # Field dictionary
 
 Every column of every file in the release. Coverage percentages are measured over the full
-catalogue (233,006 perfumes), not over the ten-perfume preview.
+catalogue (233,382 perfumes), not over the ten-perfume preview.
 
 Conventions: CSV files are UTF-8 and **pipe-delimited** (`|`), chosen because commas and
 semicolons both occur inside perfume names. Multi-value fields use `;` as the separator.
@@ -9,7 +9,7 @@ Empty means empty — there are no `NULL` or `N/A` sentinels.
 
 ---
 
-## perfumes.csv — 233,006 rows, 34 columns
+## perfumes.csv — 233,382 rows, 34 columns
 
 The master table. Everything else joins to it.
 
@@ -32,7 +32,7 @@ The master table. Everything else joins to it.
 
 | column | format | description |
 |---|---|---|
-| `notes_pyramid` | `top(id;id)middle(id)base(id;id)` **or** `linear(id;id;id)` | **85.5% populated.** Two shapes, not one: 55.3% of perfumes are pyramidal, 44.7% are flat. Ids join to `notes.csv` — see [docs/NOTES.md](docs/NOTES.md) for the compound-id case. |
+| `notes_pyramid` | `top(id;id)middle(id)base(id;id)` **or** `linear(id;id;id)` | **85.5% populated.** Two shapes, not one: 55.3% of perfumes are pyramidal, 44.7% are flat. Ids join to `notes.csv` — see [docs/NOTES.md](docs/NOTES.md). |
 | `accords` | `accord_id:votes` | `a7:1008;a19:1000;a6:477` — accords ranked by community votes, strongest first. **38.4% populated.** |
 | `perfumers` | `Name;pf_id` | Repeating pairs. **26.8% populated** — attribution is simply unknown for most of the catalogue. |
 | `bottle_design` | text | Bottle designer. 4.7% populated. |
@@ -61,21 +61,21 @@ The master table. Everything else joins to it.
 
 ---
 
-## brands.csv — 14,671 rows, 12 columns
+## brands.csv — 14,687 rows, 12 columns
 
 | column | description |
 |---|---|
 | `brand_id` | Primary key, referenced by `perfumes.brand`. |
 | `slug`, `name`, `url` | Identity. |
 | `country` | Country of the house. |
-| `since_year` | Founding year. Contains genuine outliers — some houses date themselves to the 18th century. |
+| `since_year` | Founding year of the house. **15.8% populated.** Until v1.11 most rows carried a value that did not belong to the brand at all; it has been cleared, so an empty cell now means unknown rather than wrong. Genuine outliers remain — some houses date themselves to the 18th century. |
 | `website` | Official site. |
 | `interesting_facts` | Long editorial text. **4.5% populated**, averaging 1,478 characters where present. |
 | `pronunciation` | mp3 URL. |
 | `perfumers` | Perfumers associated with the house, `;`-separated. |
 | `popular_perfumes`, `new_perfumes` | Perfume ids, `;`-separated — the brand's own highlights. |
 
-## perfumers.csv — 2,549 rows, 11 columns
+## perfumers.csv — 2,594 rows, 11 columns
 
 | column | description |
 |---|---|
@@ -88,11 +88,11 @@ The master table. Everything else joins to it.
 | `interesting_facts` | Biography text. 1.7% populated. |
 | `pronunciation` | mp3 URL. |
 
-## notes.csv — 12,559 rows, 11 columns
+## notes.csv — 12,738 rows, 13 columns
 
 | column | description |
 |---|---|
-| `n_id` | Primary key. **Can be compound** — `1577;1587` — where the source merged two near-identical notes. 82 such rows. A pyramid may reference either component. |
+| `n_id` | Primary key, always a single value. Compound ids are gone as of v1.11 — merged ids now live in `n_id_aliases_p` and every pyramid reference points at the primary row. |
 | `slug`, `name`, `url` | Identity. |
 | `image_url` | Illustration of the raw material. |
 | `total_perfumes` | How many perfumes in the full catalogue carry this note. |
@@ -100,12 +100,14 @@ The master table. Everything else joins to it.
 | `first_year`, `last_year` | First and last year the note appears in the catalogue — usable as a popularity window. |
 | `categories` | `cat_id` values into `notes_categories.csv`, `;`-separated. |
 | `summary_text` | Generated description of the note's usage. |
+| `n_id_aliases_p` | Ids merged into this note, as `id:name;id:name`. Populated on 112 rows, 113 ids in total. Kept so a map built on an older release can be migrated. |
+| `n_id_primary_name_p` | The display name pinned to this `n_id` when the source renamed it. Empty when the current `name` is authoritative. |
 
-12,513 unique note names across 12,559 rows, of which 82 carry a compound id. The source
-also lists some notes by name without ever assigning an id; those rows are dropped in
-preparation, so **every row here has a usable key**. See [docs/NOTES.md](docs/NOTES.md).
+12,692 unique note names across 12,738 rows. Every row carries a single usable key:
+compound ids and empty ids are both gone as of v1.11, so a plain join on `n_id` resolves
+every reference in `notes_pyramid`. See [docs/NOTES.md](docs/NOTES.md).
 
-## notes_categories.csv — 653 rows, 6 columns
+## notes_categories.csv — 662 rows, 6 columns
 
 | column | description |
 |---|---|
@@ -133,9 +135,9 @@ on read.
 All five files carry `pid` as the join key back to `perfumes.csv`, and all five are verified
 to contain **zero orphan pids**.
 
-## reviews.parquet — 297,279 rows, 20 columns
+## reviews.parquet — 299,083 rows, 20 columns
 
-Long-form reviews. 100% English, average 1,248 characters, longest 47,969.
+Long-form reviews. 100% English, average 1,246 characters, longest 47,969.
 
 `pid`, `comment_id`, `review_url`, `title`, `text`, `lang`, `date`, `date_text`,
 `author`, `author_url`, `author_review_count`, `avatar_url`, `badge`, `awards_count`,
@@ -144,12 +146,12 @@ Long-form reviews. 100% English, average 1,248 characters, longest 47,969.
 
 The per-review ratings are what aggregate into the histograms in `perfumes.csv`.
 
-## statements.parquet — 1,083,415 rows, 18 columns
+## statements.parquet — 1,090,782 rows, 18 columns
 
 Short impressions, capped at 251 characters. Same author and rating columns as reviews,
 plus `statement_url` and `crawl_anchor_unix`. The `lang` column exists but is unpopulated.
 
-## comments.parquet — 2,827,499 rows, 11 columns
+## comments.parquet — 2,833,783 rows, 11 columns
 
 Replies to reviews and statements — a second conversational level.
 
@@ -158,12 +160,12 @@ being replied to; 78.7% hang off statements, 21.3% off reviews. `helpful_count` 
 the reply itself. `date_text` here is **relative** (“3 months ago”) as the source renders
 it, with no absolute timestamp.
 
-## photos.parquet — 198,051 rows, 10 columns
+## photos.parquet — 198,877 rows, 10 columns
 
 User photo metadata as structured records: `photo_id`, `photo_url`, `title`, `details_url`,
 `author`, `author_user_id`, `awards_count`, `comments_count`, `pid`, `crawled_at`.
 
-## videos.parquet — 2,868 rows, 13 columns
+## videos.parquet — 2,932 rows, 13 columns
 
 `youtube_id` (87.8% of rows), `source_url`, `thumbnail_url`, `title`, `duration`,
 `start_time`, author fields and `date_text`.

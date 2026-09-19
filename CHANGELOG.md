@@ -3,6 +3,42 @@
 Dates are snapshot dates — the day the catalogue was captured, not the day the preview was
 committed.
 
+## v1.11 — 2026-09-19
+
+- 233,382 perfumes (+376), 14,687 brands (+16), 2,594 perfumers (+45), 12,738 notes (+179),
+  662 note categories (+9). Accords: **21**, one fewer.
+- 4,425,457 community records (+16,345): reviews 299,083, statements 1,090,782,
+  replies 2,833,783, photo records 198,877, videos 2,932.
+- **`notes.csv` has two new columns and a changed key.** `n_id` is now always a single
+  value — compound keys such as `1577;1587` are gone, and so are empty ones. Ids merged at
+  the source live in `n_id_aliases_p` (`id:name;id:name`, 113 ids across 112 rows), and
+  `n_id_primary_name_p` pins a display name where the source renamed a note. Every id inside
+  `notes_pyramid` now points at a primary row, so a plain join on `n_id` resolves all of
+  them; code that split the key on `;` should drop that step. Preview rows in `data/` are
+  rebuilt for this reason — the layout moved.
+- **`since_year` in `brands.csv` was wrong for most rows and has been cleared.** Until v1.11
+  a large majority carried a year that did not belong to the brand. Coverage is now 15.8%,
+  and an empty cell means unknown rather than wrong.
+- **Brand names corrected in 404 rows.** 389 of those are our own field being fixed, where
+  the name column carried the URL slug (`saint-skei` to `Saint Skei`). 15 are genuine
+  renames at the source, the largest being Midnight Gypsy Alchemy to House of Moth and
+  Stars and Ibraheem Al.Qurashi to Ibraq.
+- **One accord withdrawn.** `Fougère` existed twice because an escape sequence in the raw
+  data was not decoded; the sold id `a21` is kept and `a22` is retired, never to be reissued.
+- **Classification votes are now derived.** `style`, `season`, `occasion` and the accord
+  votes come from the published percentages and total, distributed by largest remainder so
+  they sum to the published total. Where the previous exact counts are still correct they
+  are kept.
+- **Photo coverage restated as 93.1%.** Earlier releases reported 96.4%: the placeholder
+  filter matched two exact URLs and the source had since moved them. It now matches by path.
+  No photo was lost — the figure was overstated.
+- Removed at the source: 13 notes, one perfumer, six brands. Nothing in the catalogue
+  references them, and they are deletions rather than merges.
+- Documentation re-measured against this snapshot: field dictionary, notes page, limits and
+  UGC coverage all recomputed from the v1.11 files.
+- **New: a Data API.** Per-record HTTP access to the same catalogue, priced per record. See
+  the README.
+
 ## v1.10 — 2026-09-10
 
 - 233,006 perfumes (+1,009), 14,671 brands (+54). Perfumers, notes and note categories are

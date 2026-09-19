@@ -1,6 +1,6 @@
 # Notes and their taxonomy
 
-12,559 notes (12,513 distinct names), arranged under 653 hierarchical categories. Two things here differ
+12,738 notes (12,692 distinct names), arranged under 662 hierarchical categories. Two things here differ
 from what a flat note list would give you, and both change how you should query.
 
 ## The pyramid has two shapes
@@ -24,30 +24,27 @@ def pyramid(value):
             for m in re.finditer(r"(top|middle|base|linear)\(([^)]*)\)", value or "")}
 ```
 
-## Note ids can be compound
+## Note ids used to be compound — they are not any more
 
-Most `n_id` values are a single number. **82 rows carry a compound id** such as
-`1577;1587` (Lime) or `13987;2573` (Maritime pine): two source entries for what is one
-material, merged into a single note.
+Through v1.10, **82 rows carried a compound `n_id`** such as `1577;1587` (Lime): two source
+entries for one material, merged into a single row. A perfume's pyramid could reference
+either component, so an exact match against `n_id` missed them — 159 distinct ids and
+21,563 perfumes, 9.25% of the catalogue.
 
-A perfume's pyramid may reference **either component**. So an exact match of pyramid id
-against `n_id` fails for these — the note exists, under a key that contains the id rather
-than equalling it. Across the full catalogue that affects 159 distinct ids and 21,563
-perfumes, 9.25% of the catalogue.
+**As of v1.11 that is gone.** `n_id` is always a single value, there are no empty keys, and
+every id inside `notes_pyramid` points at a primary row. A plain join resolves everything:
 
 ```python
-def note_index(notes_df):
-    """id -> row, expanding compound keys so both components resolve."""
-    idx = {}
-    for row in notes_df.to_dict("records"):
-        for part in str(row["n_id"]).split(";"):
-            if part.strip():
-                idx[part.strip()] = row
-    return idx
+idx = {row["n_id"]: row for row in notes_df.to_dict("records")}
 ```
 
-The preview in this repository is built with that expansion and its integrity check
-verifies it, so every pyramid id here resolves.
+If you built a map against an older release, migrate it through `n_id_aliases_p`. That
+column lists the ids that were folded into a row, as `id:name;id:name` — 113 ids across 112
+rows. An id that appears there is retired: it will never be issued again, and a lookup of it
+should land on the row that carries it.
+
+`n_id_primary_name_p` carries the display name pinned to an id when the source renamed the
+note — 82 rows. Where it is empty, the `name` column is authoritative.
 
 ## Notes the source never gave an id
 
