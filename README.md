@@ -2,13 +2,13 @@
 
 # ParfumDB — Parfumo Fragrance Database
 
-[![Data](https://img.shields.io/badge/perfumes-233%2C382-1f6feb)](data/catalog.json)
-[![Brands](https://img.shields.io/badge/brands-14%2C687-1f6feb)](data/catalog.json)
-[![UGC](https://img.shields.io/badge/user%20records-4.43M-1f6feb)](data/catalog.json)
-[![Snapshot](https://img.shields.io/badge/snapshot-v1.11%20%C2%B7%202026--09--19-555)](data/catalog.json)
+[![Data](https://img.shields.io/badge/perfumes-234%2C736-1f6feb)](data/catalog.json)
+[![Brands](https://img.shields.io/badge/brands-14%2C763-1f6feb)](data/catalog.json)
+[![UGC](https://img.shields.io/badge/user%20records-4.45M-1f6feb)](data/catalog.json)
+[![Snapshot](https://img.shields.io/badge/snapshot-v1.12%20%C2%B7%202026--09--30-555)](data/catalog.json)
 
-A structured release of the **Parfumo** fragrance catalogue: 233,382 perfumes with their
-brands, perfumers, notes, accords — and 4.43 million pieces of community content attached
+A structured release of the **Parfumo** fragrance catalogue: 234,736 perfumes with their
+brands, perfumers, notes, accords — and 4.45 million pieces of community content attached
 to them.
 
 This repository is the **open preview**. It carries the complete file layout, every column
@@ -21,20 +21,20 @@ release is at **[parfumdb.net](https://parfumdb.net)**.
 
 | | count |
 |---|---:|
-| Perfumes | 233,382 |
-| Brands | 14,687 |
-| Perfumers | 2,594 |
-| Notes | 12,738 |
-| Note categories | 662 |
+| Perfumes | 234,736 |
+| Brands | 14,763 |
+| Perfumers | 2,625 |
+| Notes | 12,859 |
+| Note categories | 666 |
 | Accords | 21 |
-| Perfume photos | 198,877 |
-| **Community records** | **4,425,457** |
+| Perfume photos | 199,453 |
+| **Community records** | **4,449,877** |
 
 Machine-readable in [`data/catalog.json`](data/catalog.json) — the same numbers, generated
 from the release descriptor rather than typed by hand.
 
 Format: CSV (`|`-delimited, UTF-8) for the catalogue, Apache Parquet for community content.
-437 MB compressed, 565 MB unpacked.
+440 MB compressed, 569 MB unpacked.
 
 ## What is in this repository
 
@@ -55,10 +55,10 @@ broken one.
 data/
   perfumes.csv           10 rows × 34 columns   master table
   brands.csv             10 rows × 12 columns
-  perfumers.csv          13 rows × 11 columns
-  notes.csv              82 rows × 11 columns
-  notes_categories.csv  106 rows ×  6 columns   hierarchical taxonomy
-  accords.csv            18 rows ×  4 columns
+  perfumers.csv          14 rows × 11 columns
+  notes.csv              85 rows × 13 columns
+  notes_categories.csv  105 rows ×  6 columns   hierarchical taxonomy
+  accords.csv            17 rows ×  4 columns
   reviews.parquet        10 rows × 20 columns   long-form reviews
   statements.parquet     10 rows × 18 columns   short impressions
   comments.parquet       10 rows × 11 columns   replies to the two above
@@ -168,15 +168,15 @@ downloadable files described in this README.
 ## What makes this catalogue distinctive
 
 **Community content is four separate layers, not one comment stream.** Long-form reviews
-(299,083, averaging 1,246 characters), short statements (1,090,782), replies attached to
-either of those (2,833,783), plus structured photo and video records. They are different
+(301,830, averaging 1,245 characters), short statements (1,101,287), replies attached to
+either of those (2,844,336), plus structured photo and video records. They are different
 tables with different columns because they are different acts. See [`docs/UGC.md`](docs/UGC.md).
 
 **Ratings arrive as distributions, not averages.** `longevity`, `sillage`, `scent`,
 `bottle` and `value` are stored as full 0–10 histograms — `0:4;1:4;2:21;…;10:66` — so you
-can see disagreement, not just a mean. 29.3 million property votes in total.
+can see disagreement, not just a mean. 29.5 million property votes in total.
 
-**Notes have a real taxonomy.** 12,738 notes organised under 662 hierarchical categories
+**Notes have a real taxonomy.** 12,859 notes organised under 666 hierarchical categories
 with parent/child and related-category links, each note carrying its own occurrence count
 and first/last year of use. See [`docs/NOTES.md`](docs/NOTES.md).
 
@@ -187,8 +187,8 @@ label (`Summer:1057;Spring:938;…`), not free text.
 
 No retail prices, no transactions or sales figures, no inventory or availability, no
 supply-chain data, no purchase links. `value` is a community perception score from 0 to 10,
-not a price. Year is populated for 55.3% of the catalogue; accords for 38.9%; perfumers for
-26.9%. The full picture is in [`docs/LIMITS.md`](docs/LIMITS.md) — worth reading before you
+not a price. Year is populated for 55.5% of the catalogue; accords for 38.9%; perfumers for
+27.3%. The full picture is in [`docs/LIMITS.md`](docs/LIMITS.md) — worth reading before you
 plan around a field.
 
 ## Licence

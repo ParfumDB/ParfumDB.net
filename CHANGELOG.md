@@ -3,6 +3,21 @@
 Dates are snapshot dates — the day the catalogue was captured, not the day the preview was
 committed.
 
+## v1.12 — 2026-09-30
+
+- 234,736 perfumes (+1,354), 14,763 brands (+76), 2,625 perfumers (+31), 12,859 notes (+121),
+  666 note categories (+4). Accords unchanged at 21.
+- 4,449,877 community records (+24,420): reviews 301,830 (+2,747), statements 1,101,287
+  (+10,505), replies 2,844,336 (+10,553), photo records 199,453 (+576), videos 2,971 (+39).
+- The schema did not change: same files, same columns, same formats as v1.11. Preview rows
+  in `data/` are unchanged — only `catalog.json` follows the release.
+- Documentation re-measured against this snapshot: README, field dictionary, notes page,
+  limits and UGC coverage all recomputed from the v1.12 files. Several coverage figures in the
+  field dictionary — year, photo, rating, accords, perfumers, the vote histograms, gender and
+  pyramid shape, video-id coverage — were still at v1.10 and now come from the v1.12 files.
+  The file listing in the README now gives the preview's actual row and column counts, and
+  `accords.csv` is described as 21 rows, which it has been since v1.11.
+
 ## v1.11 — 2026-09-19
 
 - 233,382 perfumes (+376), 14,687 brands (+16), 2,594 perfumers (+45), 12,738 notes (+179),
