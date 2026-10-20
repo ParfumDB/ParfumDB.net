@@ -148,7 +148,7 @@ The per-review ratings are what aggregate into the histograms in `perfumes.csv`.
 
 ## statements.parquet — 1,117,856 rows, 18 columns
 
-Short impressions, capped at 251 characters. Same author and rating columns as reviews,
+Short impressions of up to 251 characters, with a single exception of 1,982. Same author and rating columns as reviews,
 plus `statement_url` and `crawl_anchor_unix`. The `lang` column exists but is unpopulated.
 
 ## comments.parquet — 2,860,446 rows, 11 columns

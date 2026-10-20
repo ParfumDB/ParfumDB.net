@@ -7,7 +7,7 @@ one table is the most common way to misread this data.
 | layer | rows | what it is |
 |---|---:|---|
 | Reviews | 306,178 | Considered write-ups. Average 1,242 characters, longest 47,969. Carry the author's own 0–10 scores. |
-| Statements | 1,117,856 | One-liners, hard-capped at 251 characters. Also carry scores. |
+| Statements | 1,117,856 | One-liners: all but one fit in 251 characters (the exception is 1,982). Also carry scores. |
 | Comments | 2,860,446 | Replies **to** a review or a statement. No scores — this is conversation, not judgement. |
 | Photos | 200,731 | Structured records: id, url, title, author, awards. |
 | Videos | 3,107 | Mostly YouTube (88.8% carry an id), with duration and start offset. |
