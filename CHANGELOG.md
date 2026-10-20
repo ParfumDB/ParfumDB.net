@@ -3,6 +3,34 @@
 Dates are snapshot dates — the day the catalogue was captured, not the day the preview was
 committed.
 
+## v1.14 — 2026-10-19
+
+- 236,248 perfumes (+901), 14,843 brands (+37), 2,665 perfumers (+19), 13,004 notes (+96),
+  670 note categories (+3). Accords unchanged at 21.
+- 4,488,318 community records (+21,455): reviews 306,178 (+2,402), statements 1,117,856
+  (+9,287), replies 2,860,446 (+8,810), photo records 200,731 (+866), videos 3,107 (+90).
+- **Note ids stay put when the source re-keys a note.** In this crawl the source moved six
+  notes to new ids with new page addresses and pointed every pyramid at the new id — the
+  largest, `3473` Florentine iris, carries 455 perfumes. Each keeps its existing `n_id`; the
+  new source id is listed in `n_id_aliases_p`, and pyramids reference the existing id, so a
+  map built on an earlier release keeps working. Thirteen further notes were merged into an
+  existing row the same way. `n_id_aliases_p` now holds 134 ids across 133 rows.
+- No perfume, brand, perfumer or note key carried in v1.13 was lost or reassigned.
+- The schema of the preview files did not change: same columns, same formats as v1.12.
+  Preview rows in `data/` are unchanged — only `catalog.json` follows the release.
+- Documentation re-measured against this snapshot: README, field dictionary, notes page,
+  limits and UGC coverage all recomputed from the v1.14 files.
+
+## v1.13 — 2026-10-09
+
+Not published as a separate preview; the figures are listed here so the history has no gap.
+
+- 235,347 perfumes (+611), 14,806 brands (+43), 2,646 perfumers (+21), 12,908 notes (+49),
+  667 note categories (+1). Accords unchanged at 21.
+- 4,466,863 community records (+16,986): reviews 303,776 (+1,946), statements 1,108,569
+  (+7,282), replies 2,851,636 (+7,300), photo records 199,865 (+412), videos 3,017 (+46).
+- 113 perfumes changed their page address at the source; their `pid` did not change.
+
 ## v1.12 — 2026-09-30
 
 - 234,736 perfumes (+1,354), 14,763 brands (+76), 2,625 perfumers (+31), 12,859 notes (+121),

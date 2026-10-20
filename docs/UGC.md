@@ -1,16 +1,16 @@
 # The four layers of community content
 
-4,449,877 records, and they are not one comment stream cut four ways. Each layer is a
+4,488,318 records, and they are not one comment stream cut four ways. Each layer is a
 different act by a different kind of participant, with its own columns. Treating them as
 one table is the most common way to misread this data.
 
 | layer | rows | what it is |
 |---|---:|---|
-| Reviews | 301,830 | Considered write-ups. Average 1,245 characters, longest 47,969. Carry the author's own 0–10 scores. |
-| Statements | 1,101,287 | One-liners, hard-capped at 251 characters. Also carry scores. |
-| Comments | 2,844,336 | Replies **to** a review or a statement. No scores — this is conversation, not judgement. |
-| Photos | 199,453 | Structured records: id, url, title, author, awards. |
-| Videos | 2,971 | Mostly YouTube (88.3% carry an id), with duration and start offset. |
+| Reviews | 306,178 | Considered write-ups. Average 1,242 characters, longest 47,969. Carry the author's own 0–10 scores. |
+| Statements | 1,117,856 | One-liners, hard-capped at 251 characters. Also carry scores. |
+| Comments | 2,860,446 | Replies **to** a review or a statement. No scores — this is conversation, not judgement. |
+| Photos | 200,731 | Structured records: id, url, title, author, awards. |
+| Videos | 3,107 | Mostly YouTube (88.8% carry an id), with duration and start offset. |
 
 ## Why the split matters
 
@@ -50,12 +50,12 @@ the data and should not be presented as exact.
 
 ## Coverage
 
-The five layers are not spread evenly. Across the full catalogue: 71,561 perfumes have at
-least one statement, 53,762 have replies, 51,148 have a review, 42,128 have photos, and
-only **1,552 have video**. Video is the scarcest thing in this release by two orders of
+The five layers are not spread evenly. Across the full catalogue: 72,503 perfumes have at
+least one statement, 54,161 have replies, 51,694 have a review, 42,388 have photos, and
+only **1,601 have video**. Video is the scarcest thing in this release by two orders of
 magnitude.
 
-The ten perfumes in this preview were chosen to have all five layers at once — 1,113
+The ten perfumes in this preview were chosen to have all five layers at once — 1,148
 perfumes in the catalogue qualify. That is what makes every parquet file here non-empty,
 and it is not representative of the catalogue as a whole.
 
