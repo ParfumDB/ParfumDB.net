@@ -16,25 +16,25 @@ If you need commerce data, this release will not give it to you at any tier.
 
 ## Present but partial
 
-Coverage over the full 236,248-perfume catalogue:
+Coverage over the full 237,448-perfume catalogue:
 
 | field | populated |
 |---|---:|
 | `description` | 100% |
-| `photo` | 93.2% |
+| `photo` | 93.3% |
 | `notes_pyramid` | 85.7% |
-| `year` | 55.7% |
-| `rating` | 47.4% |
-| `accords` | 39.3% |
-| `style` | 38.1% |
-| `bottle` histogram | 37.6% |
-| `occasion` / `season` | 37.4% / 37.4% |
-| `perfumers` | 27.5% |
+| `year` | 55.8% |
+| `rating` | 47.3% |
+| `accords` | 39.2% |
+| `style` | 37.9% |
+| `bottle` histogram | 37.4% |
+| `occasion` / `season` | 37.3% / 37.3% |
+| `perfumers` | 27.6% |
 | `scent` histogram | 24.3% |
-| `longevity` / `sillage` histograms | 22.7% / 22.6% |
-| `pronunciation` | 22.1% |
+| `longevity` / `sillage` histograms | 22.7% / 22.5% |
+| `pronunciation` | 22.0% |
 | `concentration` | 16.0% |
-| `gtin13` | 13.5% |
+| `gtin13` | 13.4% |
 | `value` histogram | 10.8% |
 | `bottle_design` | 4.7% |
 
@@ -44,7 +44,7 @@ community has not voted on. Popular perfumes are densely filled.
 ## Known quirks, deliberately preserved
 
 **Photo placeholders are filtered.** Perfumes whose only image was the source's "no photo"
-placeholder carry an empty `photo` instead — 16,055 rows. Real coverage is **93.2%**;
+placeholder carry an empty `photo` instead — 15,981 rows. Real coverage is **93.3%**;
 passing the placeholder through would have inflated it to 100% and made every one of those
 a broken image in a UI. Releases before v1.11 reported 96.4% because the filter matched two
 exact placeholder URLs and the source had since moved them; it now matches by path, so the
@@ -56,13 +56,13 @@ figure dropped without any photo being lost.
 **Notes without a source id are dropped** in preparation, so every row in `notes.csv` has
 a usable key. See [NOTES.md](NOTES.md).
 
-**2,483 perfumes have at least one accord with no strength value** — 2.7% of those that
+**2,497 perfumes have at least one accord with no strength value** — 2.7% of those that
 carry accords. The accord is listed, the vote count is absent.
 
 **Comment dates are relative only** — "3 months ago", never an absolute timestamp. See
 [UGC.md](UGC.md).
 
-**`statements.lang` exists but is empty** across all 1,117,856 rows. The column is kept
+**`statements.lang` exists but is empty** across all 1,129,417 rows. The column is kept
 because it is part of the source record; do not filter on it.
 
 **Language.** Reviews are 100% English. This is a single-language catalogue — there is no
@@ -74,7 +74,7 @@ outliers. Both are what the source states, not parsing errors.
 
 ## Integrity, verified
 
-- All 236,248 perfumes have a unique `pid`; brands, perfumers and accords likewise.
+- All 237,448 perfumes have a unique `pid`; brands, perfumers and accords likewise.
 - **Zero orphan pids** across all five community files.
 - Every pyramid note id resolves against `notes.csv` once compound keys are expanded.
 

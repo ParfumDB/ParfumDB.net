@@ -1,21 +1,21 @@
 # The four layers of community content
 
-4,488,318 records, and they are not one comment stream cut four ways. Each layer is a
+4,515,966 records, and they are not one comment stream cut four ways. Each layer is a
 different act by a different kind of participant, with its own columns. Treating them as
 one table is the most common way to misread this data.
 
 | layer | rows | what it is |
 |---|---:|---|
-| Reviews | 306,178 | Considered write-ups. Average 1,242 characters, longest 47,969. Carry the author's own 0–10 scores. |
-| Statements | 1,117,856 | One-liners: all but one fit in 251 characters (the exception is 1,982). Also carry scores. |
-| Comments | 2,860,446 | Replies **to** a review or a statement. No scores — this is conversation, not judgement. |
-| Photos | 200,731 | Structured records: id, url, title, author, awards. |
-| Videos | 3,107 | Mostly YouTube (88.8% carry an id), with duration and start offset. |
+| Reviews | 309,530 | Considered write-ups. Average 1,240 characters, longest 47,969. Carry the author's own 0–10 scores. |
+| Statements | 1,129,417 | One-liners: all but one fit in 251 characters (the exception is 1,982). Also carry scores. |
+| Comments | 2,872,555 | Replies **to** a review or a statement. No scores — this is conversation, not judgement. |
+| Photos | 201,310 | Structured records: id, url, title, author, awards. |
+| Videos | 3,154 | Mostly YouTube (88.9% carry an id), with duration and start offset. |
 
 ## Why the split matters
 
 **Volume is inverted from what you would guess.** There are 3.6 short items for every long
-review, and 9.4 replies for every review. If you sample "comments" expecting opinions about
+review, and 9.3 replies for every review. If you sample "comments" expecting opinions about
 perfumes, you will mostly get people talking to each other.
 
 **Only two layers carry ratings.** Reviews and statements have `rating_overall`,
@@ -50,12 +50,12 @@ the data and should not be presented as exact.
 
 ## Coverage
 
-The five layers are not spread evenly. Across the full catalogue: 72,503 perfumes have at
-least one statement, 54,161 have replies, 51,694 have a review, 42,388 have photos, and
-only **1,601 have video**. Video is the scarcest thing in this release by two orders of
+The five layers are not spread evenly. Across the full catalogue: 72,888 perfumes have at
+least one statement, 54,412 have replies, 52,093 have a review, 42,484 have photos, and
+only **1,612 have video**. Video is the scarcest thing in this release by two orders of
 magnitude.
 
-The ten perfumes in this preview were chosen to have all five layers at once — 1,148
+The ten perfumes in this preview were chosen to have all five layers at once — 1,159
 perfumes in the catalogue qualify. That is what makes every parquet file here non-empty,
 and it is not representative of the catalogue as a whole.
 

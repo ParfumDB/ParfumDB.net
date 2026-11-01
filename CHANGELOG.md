@@ -3,6 +3,32 @@
 Dates are snapshot dates — the day the catalogue was captured, not the day the preview was
 committed.
 
+## v1.15 — 2026-10-31
+
+- 237,448 perfumes (+1,200), 14,922 brands (+79), 2,702 perfumers (+37), 13,105 notes (+101),
+  673 note categories (+3). Accords unchanged at 21.
+- 4,515,966 community records (+27,648): reviews 309,530 (+3,352), statements 1,129,417
+  (+11,561), replies 2,872,555 (+12,109), photo records 201,310 (+579), videos 3,154 (+47).
+- **Eight perfumes merged at the source.** The source folded eight Vøyde perfumes into the
+  matching LabHouse Perfume perfumes; the old pages now redirect to the surviving ones. The
+  retired `pid`s are gone from this release and will not be issued again: 390073→183089,
+  392981→204951, 396284→257854, 396285→235712, 396474→205362, 396538→297250,
+  396545→297247, 397873→183405. Six community records attached only to the retired pages
+  (one review, three statements, two photos) went with them.
+- **18 perfumes changed brand at the source**: ten from Arcana Wildcraft to Sugar Spider,
+  seven from Corania to Tutti Délices (a new brand in this release), one from Vøyde to
+  LabHouse Perfume. The perfumes keep their `pid`, and the old brand rows keep their ids.
+- `style` is empty for 21 perfumes with 1–7 votes: the source began showing votes in the
+  second pair of a style axis and publishes only the share inside each pair, so the exact
+  split cannot be recovered. It is left empty rather than guessed.
+- Three notes were merged into existing rows via `n_id_aliases_p`, which now holds 137 ids
+  across 136 rows.
+- 254 perfumes changed their page address at the source; their `pid` did not change.
+- The schema of the preview files did not change: same columns, same formats as v1.14.
+  Preview rows in `data/` are unchanged — only `catalog.json` follows the release.
+- Documentation re-measured against this snapshot: README, field dictionary, notes page,
+  limits and UGC coverage all recomputed from the v1.15 files.
+
 ## v1.14 — 2026-10-19
 
 - 236,248 perfumes (+901), 14,843 brands (+37), 2,665 perfumers (+19), 13,004 notes (+96),
