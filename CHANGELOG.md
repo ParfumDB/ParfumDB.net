@@ -3,6 +3,25 @@
 Dates are snapshot dates — the day the catalogue was captured, not the day the preview was
 committed.
 
+## v1.16 — 2026-11-10
+
+- 238,091 perfumes (+643), 14,988 brands (+66), 2,724 perfumers (+22), 13,181 notes (+76).
+  Note categories unchanged at 673, accords unchanged at 21.
+- 4,534,823 community records (+18,857): reviews 311,697 (+2,167), statements 1,137,104
+  (+7,687), replies 2,881,031 (+8,476), photo records 201,803 (+493), videos 3,188 (+34).
+- No perfume, brand, perfumer or note key carried in v1.15 was lost or reassigned.
+- **11 perfumes changed brand at the source**: ten from Maison Nikoui to Nikoui, one from
+  Ash + Bone to The Appalachian Cauldron — both new brands in this release. The perfumes
+  keep their `pid`, and the old brand rows keep their ids.
+- Two notes were merged into existing rows via `n_id_aliases_p`, which now holds 139 ids
+  across 138 rows.
+- 73 perfumes changed their page address at the source; their `pid` did not change.
+- The schema of the preview files did not change: same columns, same formats as v1.15.
+  Preview rows in `data/` are unchanged — only `catalog.json` follows the release.
+- Documentation re-measured against this snapshot: README, field dictionary, notes page,
+  limits and UGC coverage all recomputed from the v1.16 files. The download size quoted in
+  the README now follows the release as well (449 MB compressed, 579 MB unpacked).
+
 ## v1.15 — 2026-10-31
 
 - 237,448 perfumes (+1,200), 14,922 brands (+79), 2,702 perfumers (+37), 13,105 notes (+101),

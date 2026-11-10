@@ -1,30 +1,30 @@
 {
-  "snapshot": "v1.15-2026-10-31",
-  "snapshot_date": "2026-10-31",
+  "snapshot": "v1.16-2026-11-10",
+  "snapshot_date": "2026-11-10",
   "source": "https://www.parfumo.com",
   "catalog": {
-    "perfumes": 237448,
-    "brands": 14922,
-    "perfumers": 2702,
-    "notes_unique": 13105,
-    "notes_canonical": 13105,
-    "notes_file_rows": 13105,
+    "perfumes": 238091,
+    "brands": 14988,
+    "perfumers": 2724,
+    "notes_unique": 13181,
+    "notes_canonical": 13181,
+    "notes_file_rows": 13181,
     "note_categories": 673,
     "accords": 21,
     "accords_unique": 21,
-    "photos_total": 201310
+    "photos_total": 201803
   },
-  "ugc_records_total": 4515966,
+  "ugc_records_total": 4534823,
   "ugc_by_file": {
-    "reviews.parquet": 309530,
-    "statements.parquet": 1129417,
-    "comments.parquet": 2872555,
-    "photos.parquet": 201310,
-    "videos.parquet": 3154
+    "reviews.parquet": 311697,
+    "statements.parquet": 1137104,
+    "comments.parquet": 2881031,
+    "photos.parquet": 201803,
+    "videos.parquet": 3188
   },
   "release_size_mb": {
-    "compressed": 444.1,
-    "uncompressed": 575.7
+    "compressed": 448.9,
+    "uncompressed": 578.7
   },
   "sample_rows_per_file": 10
 }
