@@ -3,6 +3,42 @@
 Dates are snapshot dates — the day the catalogue was captured, not the day the preview was
 committed.
 
+## v1.17 — 2026-11-18
+
+- 238,486 perfumes (+395), 15,019 brands (+31), 2,739 perfumers (+15), 13,216 notes (+35),
+  677 note categories (+4). Accords unchanged at 21.
+- 4,550,104 community records (+15,281): reviews 313,656 (+1,959), statements 1,144,036
+  (+6,932), replies 2,886,574 (+5,543), photo records 202,591 (+788), videos 3,247 (+59).
+- **A full crawl.** Every page of the source was read again between 2026-11-14 and
+  2026-11-18, not only new and changed ones. That is why coverage moved more than the
+  catalogue grew: rating 47.3% to 47.7%, accords 39.2% to 39.6%, the usage votes and
+  histograms by one to four tenths of a point each. `style` is the one field that fell,
+  37.8% to 37.7%.
+- No perfume, brand, perfumer or note key carried in v1.16 was lost or reassigned.
+- **One note category withdrawn at the source.** `c419` was a placeholder with no name
+  (slug `n-a`); the source no longer publishes it, and no note lists it any more. Of the 126
+  notes that did, 124 keep their other categories and two now have none. Five new
+  categories arrived, hence the net +4.
+- **3 perfumes changed brand at the source**: three Colbert perfumes that the source had
+  filed under the Cannon brand page now sit under Colbert's own page, which already had a
+  brand row. The perfumes keep their `pid`, and both brand rows keep their ids.
+- **Four perfumes became archived stubs at the source** — the page still answers but no
+  longer carries the perfume. Their rows are kept as they were in v1.16, so a `pid` you
+  already hold keeps resolving: 391101, 391872, 400413, 400414. For the last two the source
+  moved the names onto two older pages of the same house (124364 and 124363), which now carry
+  them.
+- One note was merged into an existing row via `n_id_aliases_p`, which now holds 140 ids
+  across 139 rows.
+- Six notes were renamed at the source: Arbutus became Strawberry tree, along with its four
+  derivatives (berry, wood, blossom, honey), and Porridge became Oatmeal. Their `n_id` did
+  not change.
+- 22 perfumes changed their page address at the source; their `pid` did not change.
+- The schema of the preview files did not change: same columns, same formats as v1.16.
+  Preview rows in `data/` are unchanged — only `catalog.json` follows the release.
+- Documentation re-measured against this snapshot: README, field dictionary, notes page,
+  limits and UGC coverage all recomputed from the v1.17 files. Download size: 450 MB
+  compressed, 583 MB unpacked.
+
 ## v1.16 — 2026-11-10
 
 - 238,091 perfumes (+643), 14,988 brands (+66), 2,724 perfumers (+22), 13,181 notes (+76).

@@ -1,6 +1,6 @@
 # Notes and their taxonomy
 
-13,181 notes (13,136 distinct names), arranged under 673 hierarchical categories. Two things here differ
+13,216 notes (13,172 distinct names), arranged under 677 hierarchical categories. Two things here differ
 from what a flat note list would give you, and both change how you should query.
 
 ## The pyramid has two shapes
@@ -39,7 +39,7 @@ idx = {row["n_id"]: row for row in notes_df.to_dict("records")}
 ```
 
 If you built a map against an older release, migrate it through `n_id_aliases_p`. That
-column lists the ids that were folded into a row, as `id:name;id:name` — 139 ids across 138
+column lists the ids that were folded into a row, as `id:name;id:name` — 140 ids across 139
 rows. An id that appears there is retired: it will never be issued again, and a lookup of it
 should land on the row that carries it.
 
